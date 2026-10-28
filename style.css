@@ -338,3 +338,10 @@ input[type=text]:focus{border-color:var(--jade);outline:none}
 .tile:disabled{opacity:.3}
 .scenecards{grid-template-columns:repeat(auto-fit,minmax(110px,1fr))}
 .phrases{grid-template-columns:repeat(auto-fit,minmax(100px,1fr))}
+/* 긴 문장 선택지가 칸 밖으로 넘치지 않게 */
+.textopts .opt{padding:8px 6px;min-width:0}
+.textopts .lbl,.textopts .lbl.zhl{overflow-wrap:anywhere;word-break:break-all;text-align:center;line-height:1.25}
+.textopts .lbl.zhl{font-size:clamp(17px,4.2vw,22px)}
+.textopts .sub{overflow-wrap:anywhere;text-align:center}
+.choices>*{min-width:0}
+@media (max-width:520px){.choices.c3.textopts{grid-template-columns:1fr}.textopts .topt{flex-direction:row;align-items:stretch}.textopts .topt .opt{flex:1;min-height:64px}.textopts .mini-listen{flex:none;width:72px}}
